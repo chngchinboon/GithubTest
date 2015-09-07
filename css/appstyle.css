@@ -1,0 +1,140 @@
+html, body {
+	height:100%;
+	width:100%;
+}
+
+@keyframes example {
+    0% {background-color: lavender;}
+    50% {background-color: grey;}
+    100% {background-color: lavender;}
+}
+
+body {
+   font: 24px Helvetica;
+   background-color: grey;
+   animation-name: example;
+   animation-duration: 14s;/*very subtle */
+   animation-iteration-count: infinite;
+  }
+
+  #main {
+   min-height: 70%;
+   max-height: 70%;
+   margin: 0px;
+   padding: 0px;
+   display:  flex;
+   flex-flow: row;
+   }
+ 
+  #main > article {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   border-radius: 27pt;
+   background: #dddd88;
+   flex: 3 1 50%;
+   order: 2;
+   overflow: scroll;
+   }
+  
+  #main > nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 127pt;
+   background: #ccccff;
+           flex: 1 6 15%;
+           order: 1;
+    text-align: center;
+   }
+  
+  #main > aside {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 27pt;
+   background: #ccccff;
+           flex: 1 6 15%;
+           order: 3;
+   background-image: url("http://blogs.r.ftdata.co.uk/photo-diary/files/2013/09/singapore.jpg");
+   background-size: contain;
+   text-align: center;
+
+   }
+
+ 
+  header, footer {
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 10%;
+   border: 1px solid #eebb55;
+   border-radius: 27pt;
+   background: #ffeebb;
+   }
+
+
+
+
+   header {
+    text-align: center;
+   }
+
+   footer {
+       background: linear-gradient(to right, orange,yellow,green);
+   }
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    flex-flow: column;
+    flex-direction: column;
+   }
+
+   #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+            order: 0;
+   }
+  
+   #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+ }
+  
+
+  .artClass {
+    /* font-family: "Comic Sans MS", cursive, sans-serif;  */
+    font-size: 10pt; /* or 13px */
+  }
+
+  .panel-primary{
+    margin: 1%;
+   padding: 5px 0px;
+   border: 1px solid #8888bb;
+   border-radius: 5pt;
+   background: #ccccff;
+           flex: 1 6 15%;
+           order: 1;
+    text-align: center;
+    display: inline-block;
+    width:30%;
+
+  }
+
+  .panel-heading{
+
+  }
+
+  .panel-body{
+    margin: 4px;
+   padding: 5px;
+   border: 1px solid #8888bb;
+   border-radius: 5pt;
+   background: #ccccff;
+           flex: 1 6 15%;
+           order: 1;
+    text-align: center;
+    display: none
+  }
