@@ -41,7 +41,7 @@ body {
    margin: 4px;
    padding: 5px;
    border: 1px solid #8888bb;
-   border-radius: 127pt;
+   border-radius: 5pt;
    background: #ccccff;
            flex: 1 6 15%;
            order: 1;
@@ -52,7 +52,7 @@ body {
    margin: 4px;
    padding: 5px;
    border: 1px solid #8888bb;
-   border-radius: 27pt;
+   border-radius: 5pt;
    background: #ccccff;
            flex: 1 6 15%;
            order: 3;
@@ -63,25 +63,62 @@ body {
    }
 
  
-  header, footer {
+  header {
    display: block;
    margin: 4px;
-   padding: 5px;
+   padding: 5px 15px 0px 15px;
    min-height: 10%;
    border: 1px solid #eebb55;
-   border-radius: 27pt;
-   background: #ffeebb;
+   border-radius: 5pt;
+   background-color: #999;
+   color: white;
    }
 
-
-
-
-   header {
+   header h1{
+    margin: 0;
+    display: inline;
     text-align: center;
    }
 
+   header nav ul{
+    margin: 0;
+    display: inline;
+    padding: 0 0 0 15px;
+   }
+
+   header nav ul li{
+    list-style-type: none;
+    display:inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 15px; /* t r b l or tr bl */
+   }
+
+   header nav ul li a{
+    color:white;
+   }
+
+   .row {
+
+   }
+
+   .col {
+    float:left;
+    background-color: #333;
+    width:30%;
+    margin: 1%;
+   }
+
+
    footer {
-       background: linear-gradient(to right, orange,yellow,green);
+      display: block;
+      margin: 4px;
+      padding: 5px;
+      min-height: 10%;
+      border: 1px solid #eebb55;
+      border-radius: 27pt;
+      background: linear-gradient(to right, orange,yellow,green);
+      /*clear:both;*/
    }
  
   /* Too narrow to support three columns */
@@ -138,3 +175,16 @@ body {
     text-align: center;
     display: none
   }
+
+  .panelgroup{
+    margin: 1%;
+   padding: 1%;
+   border: 1px solid #8888bb;
+   border-radius: 5pt;
+   background: #666699;
+           flex: 1 6 15%;
+           order: 3;
+    text-align: center;
+  }
+
+  

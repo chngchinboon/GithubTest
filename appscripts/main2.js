@@ -30,6 +30,17 @@ require(
 
         /* note that functions for the hslstring and slider event handler is nested within require() function and hence will not be accessible by other functions. This will limit functionality if you need to use it for some other code*/
 
+        $('.panel-primary').on('mouseenter',function(){
+            var panelId= $(this).attr('id');
+            //alert(panelId + '-body')
+            $('#' + panelId + '-body').slideToggle(100);
+        });
+        $('.panel-primary').on('mouseleave',function(){
+            var panelId= $(this).attr('id');
+            $('#' + panelId + '-body').slideUp(100);
+        });
+
+
 
         }
 
